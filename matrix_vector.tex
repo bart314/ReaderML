@@ -1,0 +1,89 @@
+
+\section{Lineaire algebra}
+Lineaire algebra is een wiskundige discipline die zich bezighoudt met vectoren en matrices, vectorruimten en lineaire transformaties en die aan de basis staat van veel wetenschappelijk en industrieel programmeerwerk. Zo zijn bijvoorbeeld in \textit{game development} lineaire transformaties onontkoombaar, wordt het dagelijks vliegverkeer mogelijk gemaakt door berekeningen op vectoren, en kun je televisieschermen en displays zien als matrices. Ook \textit{machine learning} gaat voor een groot deel over lineaire algebra, en het is dus van belang dat je een goede basiskennis hebt van vectoren en matrices, en hoe je ermee werkt.
+
+\subsection{matrices}
+Op het meest basale niveau is een matrix een rechthoek van (vaak, maar zeker niet per se, gehele) getallen, zoals de matrix $X$ hieronder:
+
+\[ 
+X = \begin{bmatrix} 
+3 & 5 & 7 \\
+4 & 6 & 8
+\end{bmatrix}.
+\] 
+
+De grootte of \textit{dimensionaliteit} van een matrix wordt aangeduid door het aantal regels maal het aantal kolommen. Zo is $X$ hierboven een 2\times3-matrix (hij heeft twee regels en drie kolommen); algemeen hebben we het over een $m \times n$-matrix. In de regel wordt een hoofdletter gebruikt om de matrix zelf te definiëren, en wordt de corresponderende kleine letter gebruikt voor de individuele elementen. Die individuele elementen worden vervolgens door middel van subscripts $i$ en $j$ van elkaar onderscheiden, waarbij $i$ correspondeert met de regel en $j$ met de kolom. Dus $x_{12} = 5$, $x_{23} = 8$, enzovoort:
+
+\[ 
+X = \begin{bmatrix} 
+x_{11} & x_{12} & x_{13} \\
+x_{21} & x_{22} & x_{23}
+\end{bmatrix}.
+\] 
+
+Je kunt een matrix ook \textit{transponeren}. Dat geeft je aan met een superscript T en houdt in dat je de regels en kolommen omdraait. Dus de getransponeerde matrix $X$ is $X^T$ en die is weer gelijk aan
+%
+\[ 
+X^T = \begin{bmatrix} 
+3 & 4 \\
+5 & 6 \\
+7 & 8 \\
+\end{bmatrix}.
+\] 
+%
+Als $A$ een $m \times n$ matrix is, dan is $A^T$ een $n \times m$ matrix.
+
+\subsection{vectoren}
+Wanneer we te maken hebben met een $m \times 1$ matrix, dan spreken we over een \textit{vector}. Vectoren geven we aan met een kleine letter en het i-de element van een vector $x$ geven we aan met $x_i$ (er is hier dus maar één getal in het subscript, omdat er immers maar één kolom is). Er bestaat een onderscheid tussen \textit{kolomvectoren} en \textit{rijvectoren}. Als er bijvoorbeeld sprake is van een column-vector
+%
+\[ 
+x = \begin{bmatrix} 
+3\\
+5\\
+7
+\end{bmatrix}
+\] 
+%
+dan is de row-vector $x^T = \begin{bmatrix}3 & 5 & 7\end{bmatrix}$.
+
+\subsection{vierkante matrices}
+Vaak heb je te maken met een \textit{vierkante matrix}, met een dimensionaliteit van $n \times n$. Hiervan zijn twee speciale gevallen die je moet kennen. Allereerst is er de \textit{diagonaalmatrix}: een matrix waarvoor $a_{ij}$ gelijk is aan $0$ als $i \neq j$. Omdat alle elementen behalve de diagonaal nul zijn, wordt deze ook vaak geschreven met het woord $diag$:
+
+\[
+diag(a_{11}, a_{22}, a_{33}, \hdots, a_{nn}) =
+\begin{bmatrix}
+a_{11} & 0 & 0 & \hdots & 0 \\
+0 & a_{22} & 0 & \hdots & 0 \\
+0 & 0 & a_{33} & \hdots & 0 \\
+\vdots & \vdots &\vdots & \ddots & \vdots \\
+0 & 0 & 0 & \hdots & a_{nn} \\
+\end{bmatrix}.
+\]
+
+De tweede vierkante matrix die van belang is, is de \textit{identiteitsmatrix} of de \textit{eenheidsmatrix}, normaliter aangeduid met $I_n$. Dit is feitelijk een diagonaalmatrix met louter enen langs de diagonaal:
+
+\[
+I_n = diag(1, 1, 1 \hdots, 1) = 
+\begin{bmatrix}
+1 & 0 & 0 & \hdots & 0 \\
+0 & 1 & 0 & \hdots & 0 \\
+0 & 0 & 1 & \hdots & 0 \\
+\vdots & \vdots &\vdots & \ddots & \vdots \\
+0 & 0 & 0 & \hdots & 1 \\
+\end{bmatrix}.
+\]
+
+Vaak wordt een identiteitsmatrix zonder subscript aangegeven: in dat geval kan de grootte worden afgeleid van de context (of is deze niet relevant). De i-de kolom van een identiteitsmatrix is de eenheidsvector $e_i$.
+
+Behalve deze twee vierkante matrices bestaan er ook nog verschillende vormen van \textit{triangulaire matrices}, maar die zijn voor het onderwerp \textit{machine learning} niet zo relevant. Een laatste speciale vorm van een vierkante matrix is de zogenaamde \textit{symmetrische matrix}: een matrix $A$ is symmetrisch wanneer geldt dat $A = A^T$; zo is de matrix 
+%
+\[
+A = 
+\begin{bmatrix}
+1 & 2 & 3 \\
+2 & 6 & 4 \\
+3 & 4 & 5
+\end{bmatrix}
+\]
+%
+een symmetrische matrix. Voor een dergelijke matrix geldt dus dat $a_{ij}=a_{ji}$.

@@ -1,0 +1,73 @@
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+\documentclass[10pt]{article}
+\title{Reader machine learning}
+\usepackage[utf8]{inputenc}
+\usepackage{polyglossia}
+\setdefaultlanguage[babelshorthands=true]{dutch}
+\usepackage[font={small,it}]{caption}
+\usepackage{fontspec}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{subfiles}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\usepackage{color}
+\usepackage{hyperref}
+
+\graphicspath{ {./imgs/} }
+\newcommand{\sectionbreak}{\clearpage}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{10} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{10}  % for normal
+
+
+
+% Custom colors
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+	language=Python,
+    frame=L, 
+    framerule=0pt,	
+    otherkeywords={self,from,import,as},
+	keywordstyle=\ttb\color{deepblue},
+	emph={MyClass,__init__,array,shape,eye,zeros,ones,random,randint},          % Custom highlighting
+	emphstyle=\ttm\color{deepred},    % Custom highlighting style
+	stringstyle=\color{deepgreen},
+	showstringspaces=false,
+	xleftmargin=\parindent,
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+	\pythonstyle
+	\lstset{#1}
+}
+{}
+
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+
+\begin{document}
+
+\subfile{voorblad}
+\subfile{matrix_vector}
+\subfile{rekenen_matrix}
+\subfile{opgaven}
+\subfile{numpy}
+\subfile{lineaire_regressie}
+\subfile{logistische_regressie}
+\subfile{neural_nets}
+\subfile{confusion_matrix}
+
+\end{document}
