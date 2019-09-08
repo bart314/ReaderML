@@ -6,5 +6,6 @@
 
 #except these files
 !*.tex 
+!*.md
 !imgs/*.png
 !.gitignore
