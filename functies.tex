@@ -75,7 +75,7 @@ Om de differentie van een functie op een specifiek punt $f(a)$ te bepalen, berek
     \Delta &= \frac{f(x+h)-f(x)}{(x+h) - x} & \text{waarden voor } x \text{ en } h \text{ invullen:}\\
     &= \frac{(x+h)^2 - x^2}{(x+h)-x} & \text{kwadraten uitwerken en noemer versimpelen:} \\
     &= \frac{(x^2 + 2xh + h^2)-x^2}{h} & \text {teller vereenvoudigen:} \\
-    &= \frac{2xh + h^2}{h} & \text{alles delen door d:} \\
+    &= \frac{2xh + h^2}{h} & \text{alles delen door h:} \\
     &= 2x + h & \text{h nadert tot nul:} \\
     &= 2x
 \end{aligned}
@@ -91,12 +91,13 @@ Deze tweede functie heet de \textit{afgeleide functie} van $f(x)$ en wordt genot
 Het bepalen van een afgeleide functie wordt \textit{differentiëren} genoemd; de grafiek van $f'(x)$ heet de \textit{hellingsgrafiek} van $f(x)$. Differentiëren is een tak van de wiskunde die behoorlijk complex kan worden, maar voor nu volstaan de volgende algemene regels:
 
 \begin{itemize}
-    \item De hellingsgrafiek van een constante functie $f(x)=x$ is de lijn $f'(x)=0$: de lokale verandering van functiewaarden is overal 0. 
+    \item De hellingsgrafiek van de functie $f(x)=0$ is de lijn $f'(x)=0$: de verandering is overal 0.
+    \item De hellingsgrafiek van een constante functie $f(x)=x$ is de lijn $f'(x)=1$: de verandering blijft overal hetzelfde.
     \item De hellingsgrafiek van een niet-horizontale lijn $f(x) = ax + b$ is de constante functie $f'(x)=a$: het lokale verandering van functiewaarden is overal hetzelfde. 
     \item In het algemeen geldt dat als $f(x) = x^n$, dan is $f'(x) = nx^{n-1}$. 
 \end{itemize}
 
-Wanneer we een functie $f(x)$ met domein $D$ hebben, noemen we deze functie \textit{differentieerbaar} wanneer we voor elke $x \in D$ een afgeleide waarde kunnen bepalen. Zo is de functie $f(x) = x^2$ differentieerbaar, want over het hele domein ($D = \left[-\infty, infty\right]$) kunnen we een afgeleide waarde bepalen, namelijk $f'(x)=2x$. De functie $f(x)=|x|$ (zie Figuur \ref{img:abs}) is daarentegen niet differentieerbaar: de afgeleide functie hiervan is $f'(x)=-1 (x<0)$ en $f'(x)=1 (x>0)$, maar voor $x=0$ is de afgeleide waarde ongedefinieerd: je kunt immers oneindig veel lijnen trekken die allemaal het punt $(0,0)$ raken (in de figuur zijn twee voorbeelden getekend – de groene stippellijnen).
+Wanneer we een functie $f(x)$ met domein $D$ hebben, noemen we deze functie \textit{differentieerbaar} wanneer we voor elke $x \in D$ een afgeleide waarde kunnen bepalen. Zo is de functie $f(x) = x^2$ differentieerbaar, want over het hele domein ($D = \left[-\infty, \infty\right]$) kunnen we een afgeleide waarde bepalen, namelijk $f'(x)=2x$. De functie $f(x)=|x|$ (zie Figuur \ref{img:abs}) is daarentegen niet differentieerbaar: de afgeleide functie hiervan is $f'(x)=-1 (x<0)$ en $f'(x)=1 (x>0)$, maar voor $x=0$ is de afgeleide waarde ongedefinieerd: je kunt immers oneindig veel lijnen trekken die allemaal het punt $(0,0)$ raken (in de figuur zijn twee voorbeelden getekend – de groene stippellijnen).
 
 \begin{figure}[h]
     \centering

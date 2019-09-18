@@ -72,10 +72,10 @@ Om twee of meer matrices te kunnen optellen of aftrekken, moeten ze \textit{comp
 \end{bmatrix}
 \]
 
-De \textit{vermenigvuldiging} van matrices is iets complexer. Wanneer we bijvoorbeeld $A$ en $B$ met elkaar willen vermenigvuldigen, kan dat alleen wanneer het aantal \textit{kolommen} (in de voorbeelden hieronder aangegeven met $k$) van $A$ gelijk is aan het aantal \textit{rijen} (aangeduid met $r$) van $B$ (ook deze matrices moeten, kortom, \textit{compatibel} zijn, alleen betekent dat hier iets anders). Als $A=(a_{ij})$ een $m \times n$ matrix is en $B=(b_{jk})$ een $n \times p$ matrix, dan is hun product-matrix $C=AB=(c_{jk})$ een $m \times p$ matrix, waarvoor geldt:
+De \textit{vermenigvuldiging} van matrices is iets complexer. Wanneer we bijvoorbeeld $A$ en $B$ met elkaar willen vermenigvuldigen, kan dat alleen wanneer het aantal \textit{kolommen} (in de voorbeelden hieronder aangegeven met $k$) van $A$ gelijk is aan het aantal \textit{rijen} (aangeduid met $r$) van $B$ (ook deze matrices moeten, kortom, \textit{compatibel} zijn, alleen betekent dat hier iets anders). Als $A=(a_{ij})$ een $m \times n$ matrix is en $B=(b_{jk})$ een $n \times p$ matrix, dan is hun product-matrix $C=AB=(c_{ik})$ een $m \times p$ matrix, waarvoor geldt:
 %
 \[
-c_{jk} = \sum_{j=1}^n{a_{ij}b_{jk}}
+c_{ik} = \sum_{j=1}^n{a_{ij}b_{jk}}
 \]
 %
 voor $i=1,2,\hdots,m$ en $k=1, 2, \hdots, p$. We vermenigvuldigen, kortom, elk element $ij$ uit $A$ met elk element $jk$ uit B en tellen die vermenigvuldigen bij elkaar op om element $ik$ uit $C$ te verkrijgen. In het voorbeeld hieronder vermenigvuldigen we een $2 \times 3$ matrix met een $3 \times 2$ matrix; het resultaat is dus een $2 \times 2$ matrix:
