@@ -49,3 +49,13 @@ De tekst is aan continue verandering onderhevig: nieuwe inzichten, betere voorbe
 Hoewel de tekst met de grootste zorg is geschreven en gecontroleerd, is het niet ondenkbaar dat er fouten in zijn geslopen (zowel grammaticaal als inhoudelijk), of dat onderdelen niet volledig of onduidelijk zijn. Het staat vanzelfsprekend iedereen vrij om een pull request te doen.
 
 
+Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+
+This work is licensed under a
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
