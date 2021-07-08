@@ -24,7 +24,7 @@ Hieronder volgt de volledige lijst van packages die nodig zijn om de reader te m
 \usepackage{titlesec}
 \usepackage{tcolorbox}
 \usepackage{color}
-\usepackage{hyperref
+\usepackage{hyperref}
 ```
 
 ## Opbouw

@@ -6,7 +6,7 @@ Een groot deel van machine learning, zeker wanneer we het hebben over \textit{ge
 Overigens raken we hier direct aan een aardig aspect van \textit{machine learning}, namelijk dat twee of meer variabelen prima een gelijk verloop kunnen vertonen, zonder dat hier een causaal verband tussen bestaat. Wanneer je aspecten van je data met elkaar in verband wilt brengen, moet je je er dus altijd van vergewissen dat hier een \textit{logische} verhouding tussen bestaat. Je loopt anders het risico op zogenaamde \textit{spurieuze verhoudingen}. Zie voor mooie voorbeelden hiervan \url{http://tylervigen.com/spurious-correlations}.
 
 \subsection{De som van de gekwadrateerde afwijking}
-Wanneer we de verhouding tussen de grootte van een huis platten tegenover de waarde van datzelfde huis, krijgen we bijvoorbeeld een plaatje als in figuur \ref{img:scatter}:
+Wanneer we de verhouding tussen de grootte van een huis plotten tegenover de waarde van datzelfde huis, krijgen we bijvoorbeeld een plaatje als in figuur \ref{img:scatter}:
 
 \begin{figure}[h]
 \centering
@@ -91,6 +91,7 @@ De vector $\theta$ beschrijft een hypothese van de verhouding tussen de gegeven 
 J(\theta) = \frac{1}{2m}\sum_{i=1}^m(h_\theta(x^{(i)})-y^{(i)})^2.
 \]
 
+(De factor $2$ voor de $m$ mag je negeren, of je leest deze \href{https://math.stackexchange.com/questions/884887/why-divide-by-2m}{link}.)
 
 \subsection{Lineaire regressie}
 
