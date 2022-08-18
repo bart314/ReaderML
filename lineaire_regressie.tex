@@ -113,7 +113,7 @@ In het huizenvoorbeeld wordt de hypothese van de prijs van een huis gedefinieerd
 \caption{Contour plot van drie dimensies.\label{img:contour1}}
 \end{figure}
 
-Voor elke waarde van $\theta$ kunnen we dus de hoek van de plot op dat punt bepalen, en die hoek kunnen we gebruiken voor onze update. We weten dat de hoek van een functie op een bepaald punt gegeven wordt door de \textit{afgeleide} van die functie te nemen. Dat geldt ook voor een functie die afhankelijk is van twee (of meer) variabelen, alleen moeten we in dat geval werken met de \textit{partiële} afgeleide. Wanneer we de snelheid van het algoritme weergeven als $\alpha$, dan wordt het algoritme dat we moeten uitwerken als volgt:
+Voor elke waarde van $\theta$ kunnen we dus de hoek van de plot op dat punt bepalen, en die hoek kunnen we gebruiken voor onze update. We weten dat de hoek van een functie op een bepaald punt gegeven wordt door de \textit{afgeleide} van die functie te nemen. Dat geldt ook voor een functie die afhankelijk is van twee (of meer) variabelen, alleen moeten we in dat geval werken met de \textit{partiële} afgeleide. Wanneer we de snelheid van het algoritme weergeven als $\alpha$, dan wordt het algoritme dat we moeten uitwerken als volgt (zie appendix A voor het bewijs van deze partiële afgeleide):
 
 \[
 \begin{aligned}
@@ -123,6 +123,8 @@ Voor elke waarde van $\theta$ kunnen we dus de hoek van de plot op dat punt bepa
 &\} 
 \end{aligned}
 \]
+
+
 
 Van belang is dat je in dit stappenplan alle waarden van $j$ tegelijkertijd update. Dus je rekent eerst alle waarden uit en doet dan in één keer de update – anders krijg je een doorrekening van halve $\theta$'s. Omdat we meestal met meer dan één eigenschap (\textit{feature}) van de data te maken hebben, is het gebruikelijker (en makkelijker) om elke data-vector uit te breiden met een extra 1 aan het begin, zodat de dimensionaliteit van $\theta$ en van de data aan elkaar gelijk wordt – $\theta_0$ wordt dan eenvoudig vermenigvuldigd met die extra 1. Aldus uitgebreid en veralgemeniseerd, wordt het algoritme voor lineaire regressie
 
