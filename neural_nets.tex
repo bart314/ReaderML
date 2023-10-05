@@ -84,11 +84,16 @@ Wanneer we nu één voorbeeld $(x,y)$ nemen om de $h_\Theta(x)$ in figuur \ref{i
 
 Deze $h_\Theta(x)$ gebruiken we dan om $J(\Theta)$ uit te rekenen (onthoud dat $h_\Theta(x)$ een $K \times 1$ kolomvector is). Aan de hand van de rijvector $y$, kunnen we de foutmarge in de output-laag berekenen. Deze foutmarge gebruiken we om de fout van de \textit{individuele} gewichten in de matrices $\Theta^{(2)}$ en $\Theta^{(1)}$ te berekenen (let op dat we hier te maken hebben met een \textit{scalaire} waarde, dus de operaties op de matrices is \textit{element wise}). Het stappenplan voor de \textit{backpropagation} is dan als volgt:
 
+Binnen een loop over alle observaties (i = 1..m):
 \begin{enumerate}
 \item bereken: $\delta^{(3)} = a^{(3)} - y$
 \item bereken: $\delta^{(2)} = \Theta{(2)} \cdot \delta^{(3)} \times (g'(z^{(2)})$ (\textit{element wise})
-\item update: $\Theta^{(2)} := \Theta^{(2)} + a^{(2)} \cdot \delta{(3)}$
-\item update: $\Theta^{(1)} := \Theta^{(1)} + a^{(1)} \cdot \delta{(2)}$
+\item update: $\Delta^{(3)} := \Delta^{(3)} + a^{(2)} \cdot \delta{(3)}$
+\item update: $\Delta^{(2)} := \Delta^{(2)} + a^{(1)} \cdot \delta{(2)}$
 \end{enumerate}
 
-
+Tot slot:
+\begin{enumerate}
+\item $\Theta{(3)} := \Theta{(3)} + \frac{\Delta^{(3)}}{m}$
+\item $\Theta{(2)} := \Theta{(2)} + \frac{\Delta^{(2)}}{m}$
+\end{enumerate}
