@@ -10,7 +10,7 @@ Op een abstract niveau kunnen we zowel de lineaire als de logistische regressie 
 \caption{De perceptron.\label{img:perceptron}}
 \end{figure}
 
-De cirkel in figuur \ref{img:perceptron} waarin $\Sigma$ staat, kun je zien als een neuron die een getal tussen 0 en 1 teruggeeft, afhankelijk van de som van de gewogen input die deze cirkel binnenkrijgt van $x_1, x_2 \hdots, x_n$. Een neuraal netwerk bestaat uit een aantal van dergelijke neuronen (\textit{nodes}) die allemaal op basis van de gewogen som van de input een 1 of een 0 als output genereren. De perceptron in deze afbeelding zou je kunnen zien als een neuraal netwerk met $n$ \textit{input nodes} en 1 \textit{output node}.
+De cirkel in figuur \ref{img:perceptron} met het symbool $\Sigma$ geeft de som van de gewogen inputs door aan de volgende cirkel met de activatiefunctie. De activatiefunctie, weergegeven in de oranje cirkel, zet deze som om in een getal dat tussen de 0 en 1 ligt. Dit getal wordt bepaald op basis van de totale gewogen som van de inputs $x_1, x_2, \dots, x_n$, vermenigvuldigd met hun bijbehorende gewichten $\theta_1, \theta_2, \dots, \theta_n$, en een bias. Deze twee componenten samen (de som en de activatiefunctie) kun je zien als een neuron. Een neuraal netwerk bestaat uit meerdere van deze neuronen (ook wel \textit{nodes} genoemd) die elk, op basis van de gewogen som van hun inputs, een output genereren. In het geval van de perceptron is dit een binaire output (bijvoorbeeld 0 of 1), afhankelijk van de drempelwaarde die door de activatiefunctie wordt bepaald.
 
 \subsection{Forward en backpropagation}
 
